@@ -1,4 +1,4 @@
-name := "spark-measure"
+name := "spark-measure-prom"
 
 version := "0.19-SNAPSHOT"
 
@@ -9,13 +9,17 @@ licenses += ("Apache-2.0", url("http://www.apache.org/licenses/LICENSE-2.0"))
 
 isSnapshot := true
 
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.8"
-libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.13.2"
+
+
+
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.0"
+
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.36"
-libraryDependencies += "org.influxdb" % "influxdb-java" % "2.14"
-libraryDependencies += "org.apache.kafka" % "kafka-clients" % "3.0.1"
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.9" % "test"
-libraryDependencies += "com.github.tomakehurst" % "wiremock" % "2.27.2" % "test"
+libraryDependencies += "com.kyligence" % "promremoteclient" % "0.1.0"
+
+
+
+
 
 // publishing to Sonatype Nexus repository and Maven
 publishMavenStyle := true
